@@ -1,0 +1,5 @@
+# Optional: serve the fine-tuned BETO model locally (CPU is enough for inference).
+-r requirements.txt
+torch>=2.4,<3
+transformers==4.56.2
+huggingface-hub>=0.24,<1

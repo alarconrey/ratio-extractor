@@ -1,0 +1,34 @@
+{
+  "candidates": [
+    {
+      "use_context": false,
+      "c": 1.0,
+      "threshold": 0.55,
+      "validation_resolution_f1": 0.5689159586631133
+    },
+    {
+      "use_context": false,
+      "c": 4.0,
+      "threshold": 0.4,
+      "validation_resolution_f1": 0.5635267166360964
+    },
+    {
+      "use_context": true,
+      "c": 1.0,
+      "threshold": 0.55,
+      "validation_resolution_f1": 0.5870339141822126
+    },
+    {
+      "use_context": true,
+      "c": 4.0,
+      "threshold": 0.35,
+      "validation_resolution_f1": 0.5804397736073942
+    }
+  ],
+  "selected": {
+    "use_context": true,
+    "c": 1.0
+  },
+  "threshold": 0.55,
+  "model_version": "tfidf-v1-54b1dd9b"
+}

@@ -1,0 +1,7 @@
+{
+  "beto": {
+    "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+    "repo": "alarconx/beto-ratio-decidendi",
+    "revision": "00e715847d62b91b19a41dfb58de4349eb4d468a"
+  }
+}

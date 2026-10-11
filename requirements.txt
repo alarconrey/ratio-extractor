@@ -1,0 +1,11 @@
+# Core system (rule + TF-IDF + API + tests). Tested versions are in requirements-lock.txt.
+numpy>=2.0,<2.4
+pandas>=2.2,<3.1
+scikit-learn>=1.6,<1.10
+beautifulsoup4>=4.12,<5
+lxml>=5,<7
+fastapi>=0.115,<0.120
+uvicorn>=0.34,<1
+joblib>=1.4,<2
+pytest>=8,<10
+httpx>=0.28,<1

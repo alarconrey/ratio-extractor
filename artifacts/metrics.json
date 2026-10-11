@@ -1,0 +1,346 @@
+{
+  "model_version": "tfidf-v1-54b1dd9b",
+  "dataset_sha256": "54b1dd9b7c859ed7f1849c688d9e092e4c304507abd2bfe621099e1aea7c13d8",
+  "partitions": {
+    "train": {
+      "resolutions": 837,
+      "paragraphs": 89813,
+      "positive_share": 0.04856757930366428,
+      "years": [
+        2011,
+        2022
+      ]
+    },
+    "validation": {
+      "resolutions": 148,
+      "paragraphs": 16328,
+      "positive_share": 0.05401763841254287,
+      "years": [
+        2011,
+        2022
+      ]
+    },
+    "test": {
+      "resolutions": 499,
+      "paragraphs": 54442,
+      "positive_share": 0.07211344182800045,
+      "years": [
+        2023,
+        2024
+      ]
+    }
+  },
+  "excluded_weak_alignment": 114,
+  "resolutions_total": 1598,
+  "good_extraction_f1": 0.8,
+  "tfidf_selection": {
+    "candidates": [
+      {
+        "use_context": false,
+        "c": 1.0,
+        "threshold": 0.55,
+        "validation_resolution_f1": 0.5689159586631133
+      },
+      {
+        "use_context": false,
+        "c": 4.0,
+        "threshold": 0.4,
+        "validation_resolution_f1": 0.5635267166360964
+      },
+      {
+        "use_context": true,
+        "c": 1.0,
+        "threshold": 0.55,
+        "validation_resolution_f1": 0.5870339141822126
+      },
+      {
+        "use_context": true,
+        "c": 4.0,
+        "threshold": 0.35,
+        "validation_resolution_f1": 0.5804397736073942
+      }
+    ],
+    "selected": {
+      "use_context": true,
+      "c": 1.0
+    },
+    "threshold": 0.55,
+    "model_version": "tfidf-v1-54b1dd9b"
+  },
+  "beto": {
+    "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+    "seed": 42,
+    "max_length": 384,
+    "context_chars": 300,
+    "epochs": 2,
+    "learning_rate": 2e-05,
+    "batch_size": 16,
+    "foundations_negative_rate": 0.5,
+    "other_negative_rate": 0.15,
+    "train_paragraphs": 28979,
+    "threshold": 0.35,
+    "validation_threshold_scores": {
+      "0.1": 0.5408272101154012,
+      "0.15": 0.56448211342524,
+      "0.2": 0.5826881234825538,
+      "0.25": 0.5909339918401912,
+      "0.3": 0.5972238011121308,
+      "0.35": 0.6020803537541031,
+      "0.4": 0.5945417540301211,
+      "0.45": 0.5954704939827856,
+      "0.5": 0.5973320095383862,
+      "0.55": 0.5749618652517005,
+      "0.6": 0.555667990624795,
+      "0.65": 0.5241019432755933,
+      "0.7": 0.45017054249038496,
+      "0.75": 0.2934244802803753,
+      "0.8": 0.056858634812480255,
+      "0.85": 0.0,
+      "0.9": 0.0,
+      "0.95": 0.0
+    },
+    "test_resolution_f1": 0.6548749773159759,
+    "test_share_f1_at_least_0_8": 0.3286573146292585,
+    "dataset_sha256": "2a710572b702e6786b049502b2aebab39743080a44fdc427f14fe0dabff7a6e0",
+    "gpu": "Tesla T4",
+    "train_runtime_seconds": 4009.1088,
+    "versions": {
+      "python": "3.13.15",
+      "torch": "2.11.0+cu130",
+      "transformers": "4.56.2"
+    }
+  },
+  "test": {
+    "rule": {
+      "resolution_f1": 0.3562659072158353,
+      "resolution_f1_ci95": [
+        0.3316059341706536,
+        0.38180117828865207
+      ],
+      "resolution_f1_median": 0.3356940509915014,
+      "share_good": 0.09018036072144289,
+      "share_good_ci95": [
+        0.06807975557095126,
+        0.11854283094535926
+      ],
+      "share_below_0_3": 0.46893787575150303,
+      "resolutions": 499,
+      "paragraph": {
+        "precision": 0.1406452309020285,
+        "recall": 0.6640346408558329,
+        "f1": 0.23212536728697356
+      },
+      "by_type": [
+        {
+          "group": "Auto Agroambiental Plurinacional",
+          "resolutions": 269,
+          "resolution_f1": 0.2914714273411803
+        },
+        {
+          "group": "Auto Interlocutorio Definitivo",
+          "resolutions": 119,
+          "resolution_f1": 0.3990921217548607
+        },
+        {
+          "group": "Sentencia Agroambiental Plurinacional",
+          "resolutions": 111,
+          "resolution_f1": 0.4673775788927558
+        }
+      ],
+      "by_analyst": [
+        {
+          "group": "1037",
+          "resolutions": 302,
+          "resolution_f1": 0.3999212796468804
+        },
+        {
+          "group": "1042",
+          "resolutions": 135,
+          "resolution_f1": 0.3299544443414614
+        },
+        {
+          "group": "1045",
+          "resolutions": 36,
+          "resolution_f1": 0.17708617844010852
+        },
+        {
+          "group": "1041",
+          "resolutions": 23,
+          "resolution_f1": 0.1995278225456602
+        },
+        {
+          "group": "1044",
+          "resolutions": 2,
+          "resolution_f1": 0.6622320077175124
+        },
+        {
+          "group": "1047",
+          "resolutions": 1,
+          "resolution_f1": 0.16790490341753342
+        }
+      ]
+    },
+    "tfidf": {
+      "resolution_f1": 0.614664930433374,
+      "resolution_f1_ci95": [
+        0.5926357583434453,
+        0.6393272175523846
+      ],
+      "resolution_f1_median": 0.6540971718636693,
+      "share_good": 0.2785571142284569,
+      "share_good_ci95": [
+        0.24102930382684243,
+        0.3194684751954183
+      ],
+      "share_below_0_3": 0.12224448897795591,
+      "resolutions": 499,
+      "paragraph": {
+        "precision": 0.4901126940250904,
+        "recall": 0.587111563932756,
+        "f1": 0.5342449878317302
+      },
+      "by_type": [
+        {
+          "group": "Auto Agroambiental Plurinacional",
+          "resolutions": 269,
+          "resolution_f1": 0.5829717428083084
+        },
+        {
+          "group": "Auto Interlocutorio Definitivo",
+          "resolutions": 119,
+          "resolution_f1": 0.6505621454918221
+        },
+        {
+          "group": "Sentencia Agroambiental Plurinacional",
+          "resolutions": 111,
+          "resolution_f1": 0.6529865419575837
+        }
+      ],
+      "by_analyst": [
+        {
+          "group": "1037",
+          "resolutions": 302,
+          "resolution_f1": 0.672070509073156
+        },
+        {
+          "group": "1042",
+          "resolutions": 135,
+          "resolution_f1": 0.5839400187283359
+        },
+        {
+          "group": "1045",
+          "resolutions": 36,
+          "resolution_f1": 0.4120677987568295
+        },
+        {
+          "group": "1041",
+          "resolutions": 23,
+          "resolution_f1": 0.3476552832167269
+        },
+        {
+          "group": "1044",
+          "resolutions": 2,
+          "resolution_f1": 0.8629730451706461
+        },
+        {
+          "group": "1047",
+          "resolutions": 1,
+          "resolution_f1": 0.3641456582633053
+        }
+      ]
+    },
+    "beto": {
+      "resolution_f1": 0.6548749773159759,
+      "resolution_f1_ci95": [
+        0.6353283728943926,
+        0.6769913977266587
+      ],
+      "resolution_f1_median": 0.6890322580645162,
+      "share_good": 0.3286573146292585,
+      "share_good_ci95": [
+        0.2888887524754859,
+        0.37104391817069776
+      ],
+      "share_below_0_3": 0.10420841683366733,
+      "resolutions": 499,
+      "paragraph": {
+        "precision": 0.5096350963509635,
+        "recall": 0.6332144676515538,
+        "f1": 0.5647432985006815
+      },
+      "by_type": [
+        {
+          "group": "Auto Agroambiental Plurinacional",
+          "resolutions": 269,
+          "resolution_f1": 0.6194582149549974
+        },
+        {
+          "group": "Auto Interlocutorio Definitivo",
+          "resolutions": 119,
+          "resolution_f1": 0.7335485460593939
+        },
+        {
+          "group": "Sentencia Agroambiental Plurinacional",
+          "resolutions": 111,
+          "resolution_f1": 0.6563610529433314
+        }
+      ],
+      "by_analyst": [
+        {
+          "group": "1037",
+          "resolutions": 302,
+          "resolution_f1": 0.7198817854210366
+        },
+        {
+          "group": "1042",
+          "resolutions": 135,
+          "resolution_f1": 0.6128346648391769
+        },
+        {
+          "group": "1045",
+          "resolutions": 36,
+          "resolution_f1": 0.44937208523193867
+        },
+        {
+          "group": "1041",
+          "resolutions": 23,
+          "resolution_f1": 0.35797288098049035
+        },
+        {
+          "group": "1044",
+          "resolutions": 2,
+          "resolution_f1": 0.8886926967319111
+        },
+        {
+          "group": "1047",
+          "resolutions": 1,
+          "resolution_f1": 0.4574780058651026
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "rule_vs_tfidf": {
+      "only_first": 13,
+      "only_second": 107,
+      "p_value": 1.4958728419663173e-19
+    },
+    "tfidf_vs_beto": {
+      "only_first": 43,
+      "only_second": 68,
+      "p_value": 0.02229795480194799
+    }
+  },
+  "method_names": {
+    "rule": "Regla de sección",
+    "tfidf": "TF-IDF + regresión logística",
+    "beto": "BETO con ajuste fino"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.3.5",
+    "fastapi": "0.119.1"
+  }
+}
